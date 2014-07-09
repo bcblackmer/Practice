@@ -1,30 +1,30 @@
 # This function will break up words for us.
 def break_words(stuff)
     words = stuff.split(' ')
-    words
+    return words
 end
 
 # Sorts the words.
 def sort_words(words)
-    words.sort()
+    return words.sort()
 end
 
 # Prints the first word after popping it off.
 def puts_first_word(words)
-    word = words.pop()
+    word = words.pop(0)
     puts word
 end
 
 # Prints the last word after popping it off.
 def puts_last_word(words)
-    word = words.pop()
+    word = words.pop(1)
     puts word
 end
 
 # Takes in a full sentence and returns the sorted words.
 def sort_sentence(sentence)
     words = break_words(sentence)
-    sort_words(words)
+    return sort_words(words)
 end
 
 # Puts the first and last words of the sentence.
@@ -82,7 +82,7 @@ start_point = start_point / 10
 puts "We can also do that this way:"
 puts "We'd have %d beans, %d jars, and %d crates." % secret_formula(start_point)
 
-sentence = "All good \tthings come to those who wait."
+sentence = "All good things come to those who wait."
 
 words = break_words(sentence)
 sorted_words = sort_words(words)
